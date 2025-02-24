@@ -1,0 +1,979 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/1.0.0"/>
+        <rdfs:comment>A knowledge model for describing several types of smart watches based on their components, characteristics and make.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isComponentOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasFeature">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isFeatureOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasMake -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasMake">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/isFeatureOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasWidestDiameterInMillimetres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasWidestDiameterInMillimetres">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/AnalogWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/AnalogWatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Battery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Bezel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Bezel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Buckle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Buckle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ChunkySmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ChunkySmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasWidestDiameterInMillimetres"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Clasp -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Clasp">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SecuringMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Crown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Crown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/DigitalWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/DigitalWatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Display -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Display">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/FitnessSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/FitnessSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ActivityTracking"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SportsMode"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GeneralPurposeSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GeneralPurposeSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Customizable"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WaterResistant"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HybridSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HybridSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MultiFunctional"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/KidFriendlySmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/KidFriendlySmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GPSTracking"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SOSCalling"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/LocationSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/LocationSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Lug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Lug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+        <rdfs:comment>Lugs are small extensions that connect the case to the strap or bracelet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/LuxurySmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/LuxurySmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Premium"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Stylish"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MedicalSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MedicalSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthTracking"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MedicationReminder"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HeartRateSensor"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SpO2Sensor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MotionSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MotionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MultiStrapSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MultiStrapSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Multistrap"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Strap"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Processor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Processor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/QuartzWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/QuartzWatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SecuringMechanism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SecuringMechanism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SlimSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SlimSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ChunkySmartWatch"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Battery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Display"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SecuringMechanism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Strap"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A smartwatch is a type of watch and a wearable computing device.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SpecialistSmartWatch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SpecialistSmartWatch">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Specialized"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Strap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Strap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Timepiece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Timepiece"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Watch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Timepiece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Accelerometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Accelerometer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MotionSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Accurate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Accurate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ActivityTracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ActivityTracking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Adaptable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Adaptable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Apple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Apple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Boat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Boat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Boult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Boult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Compact -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Compact">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Customizable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Customizable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Durable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Durable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ECGSensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/ECGSensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Ergonomic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Ergonomic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Fastrack -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Fastrack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Fitbit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Fitbit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Fossil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Fossil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GPSModule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GPSModule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/LocationSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GPSTracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GPSTracking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GarminFenix7X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GarminFenix7X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+        <hasWidestDiameterInMillimetres rdf:datatype="http://www.w3.org/2001/XMLSchema#float">51.0</hasWidestDiameterInMillimetres>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GarminLily -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/GarminLily">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+        <hasWidestDiameterInMillimetres rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.0</hasWidestDiameterInMillimetres>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Google -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Google">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Gyroscope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Gyroscope">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MotionSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthTracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthTracking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HeartRateSensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HeartRateSensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Hypoallergenic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Hypoallergenic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Interactive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Interactive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Lightweight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Lightweight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MedicationReminder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MedicationReminder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Minimalist -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Minimalist">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MultiFunctional -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/MultiFunctional">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Multistrap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Multistrap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Noise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Noise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/OnePlus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/OnePlus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Pebble -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Pebble">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Portable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Portable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Precise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Precise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Premium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Premium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Realme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Realme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Redmi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Redmi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Reliable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Reliable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SOSCalling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SOSCalling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Samsung -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Samsung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SpO2Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SpO2Sensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/HealthSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Specialized -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Specialized">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SportsMode -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SportsMode">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Stylish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Stylish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Titan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Titan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Versatile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Versatile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WaterResistant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WaterResistant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Wearable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Wearable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/AnalogWatch"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/DigitalWatch"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/SmartWatch"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/Timepiece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchCharacteristic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchComponent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2025/SmartWatchOntology/WatchMake"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
